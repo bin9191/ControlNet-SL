@@ -1,0 +1,22 @@
+train:
+  base_path: /scratch/dixiyao
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15.yaml
+  log_path: ./logs/rec_patchshuffling/
+  condition: canny
+  target: hint
+  rec_channel: 320
+  use_patchshuffling: true
+  patch_size: 4
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/attacks/inversion/patchshuffling/
+  log_path: ./logs/rec_patchshuffling/
+  only_valid: False
+  valid_dataset: celeba
+
+utils:
+  batch_size: 8
+  seed: 999
+
+
+

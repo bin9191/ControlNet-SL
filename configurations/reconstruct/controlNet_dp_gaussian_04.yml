@@ -1,0 +1,25 @@
+train:
+  base_path: /scratch/dixiyao
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15.yaml
+  log_path: ./logs/rec_dp_gaussian_04/
+  condition: canny
+  target: hint
+  rec_channel: 320
+  dp:
+    gaussian:
+      delta: 1
+      sensitivity: 1
+      epsilon: 0.4
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/attacks/inversion/dp_gaussian_04/
+  log_path: ./logs/rec_dp_gaussian_04/
+  only_valid: False
+  valid_dataset: celeba
+
+utils:
+  batch_size: 8
+  seed: 999
+
+
+

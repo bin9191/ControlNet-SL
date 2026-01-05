@@ -1,0 +1,20 @@
+train:
+  base_path: /scratch/dixiyao
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15_hide_prompt_safe_changet.yaml
+  log_path: ./logs/rec_inversion_ours_changet_epsilon2/
+  condition: canny
+  target: hint
+  timestep_start: 226
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/attacks/inversion_ours_changet_epsilon2/
+  log_path: ./logs/rec_inversion_ours_changet_epsilon2/
+  only_valid: false
+  valid_dataset: celeba
+
+utils:
+  batch_size: 8
+  seed: 999
+
+
+

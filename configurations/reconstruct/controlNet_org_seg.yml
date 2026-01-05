@@ -1,0 +1,20 @@
+train:
+  base_path: /data/dixi
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15.yaml
+  log_path: ./logs/rec_inversion_origin/
+  condition: seg
+  target: hint
+  rec_channel: 320
+
+valid:
+  model_path: /data/dixi/controlnet/attacks/inversion_estimated/
+  log_path: ./logs/rec_inversion_origin/
+  only_valid: false
+  valid_dataset: celeba
+
+utils:
+  batch_size: 4
+  seed: 999
+
+
+

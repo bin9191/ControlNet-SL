@@ -1,0 +1,21 @@
+train:
+  base_path: /data/dixi/
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15.yaml
+  log_path: ./logs/rec_mixup/
+  condition: canny
+  target: hint
+  rec_channel: 320
+  use_mixup: true
+
+valid:
+  model_path: /data/dixi/controlnet/attacks/inversion/mixup/
+  log_path: ./logs/rec_mixup/
+  only_valid: False
+  valid_dataset: celeba
+
+utils:
+  batch_size: 8
+  seed: 999
+
+
+

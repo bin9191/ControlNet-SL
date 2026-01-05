@@ -1,0 +1,20 @@
+train:
+  base_path: /scratch/dixiyao
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15_our_2_k.yaml
+  log_path: ./logs/rec_inversion_ours_2_k/
+  condition: canny
+  target: hint
+  timestep_start: 536
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/attacks/inversion_ours_2_k/
+  log_path: ./logs/rec_inversion_ours_2_k/
+  only_valid: false
+  valid_dataset: celeba
+
+utils:
+  batch_size: 8
+  seed: 999
+
+
+

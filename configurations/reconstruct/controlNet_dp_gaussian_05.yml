@@ -1,0 +1,25 @@
+train:
+  base_path: /data/dixi
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15.yaml
+  log_path: ./logs/rec_dp_gaussian_05/
+  condition: seg
+  target: hint
+  rec_channel: 320
+  dp:
+    gaussian:
+      delta: 1
+      sensitivity: 1
+      epsilon: 0.5
+
+valid:
+  model_path: /data/dixi/controlnet/attacks/inversion/dp_gaussian_05/
+  log_path: ./logs/rec_dp_gaussian_05/
+  only_valid: false
+  valid_dataset: celeba
+
+utils:
+  batch_size: 4
+  seed: 999
+
+
+

@@ -1,0 +1,28 @@
+train:
+  base_path: /scratch/dixiyao
+  model_path: /controlnet/models/control_sd15_ini.ckpt
+  model_config_path: ./Baseline_models/cldm_v15.yaml
+  log_path: logs/dp_gaussian_02
+  result_path: logs/dp_gaussian_02/results.txt
+  condition: canny
+  dp:
+    gaussian:
+      delta: 1
+      sensitivity: 1
+      epsilon: 0.2
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/models
+  log_path: logs/dp_gaussian_02
+  result_path: ./logs/dp_gaussian_02/test.txt
+
+utils:
+  batch_size: 4
+  logger_freq: 300
+  seed: 999
+  training_dataset_size: 50000
+  validation_dataset_size: 1000
+  training_epochs: 2
+
+
+

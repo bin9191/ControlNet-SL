@@ -1,0 +1,24 @@
+train:
+  base_path: /data/dixi
+  model_config_path: ./ReconstructClientModel/client_models/cldm_v15.yaml
+  log_path: ./logs/rec_addnoise_50/
+  condition: canny
+  target: hint
+  rec_channel: 320
+  random_reponse:
+    text: false
+    condition: true
+    std: 50
+
+valid:
+  model_path: /data/dixi/controlnet/attacks/inversion/addnoise_50/
+  log_path: ./logs/rec_addnoise_1/
+  only_valid: False
+  valid_dataset: celeba
+
+utils:
+  batch_size: 8
+  seed: 999
+
+
+

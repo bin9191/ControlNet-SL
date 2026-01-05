@@ -1,0 +1,23 @@
+train:
+  base_path: /scratch/dixiyao
+  model_path: /controlnet/models/control_sd15_canny_addnoise1.pth
+  model_config_path: ./ControlNet/models/cldm_v15.yaml
+  log_path: logs/addnoise_1
+  condition: canny
+  random_reponse:
+    text: true
+    condition: true
+    std: 1
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/models
+
+utils:
+  batch_size: 4
+  logger_freq: 300
+  seed: 999
+  training_dataset_size: 50000
+  training_epochs: 2
+
+
+

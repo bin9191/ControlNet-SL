@@ -1,0 +1,21 @@
+train:
+  base_path: /scratch/dixiyao
+  model_path: /controlnet/models/control_sd15_ini.ckpt
+  model_config_path: ./OurSafeControlNet/models/cldm_v15_hide_prompt_safe_2_k.yaml
+  log_path: logs/hidepromptsafe_2_k
+  condition: canny
+  timestep_start: 536
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/models
+
+utils:
+  batch_size: 4
+  logger_freq: 300
+  seed: 999
+  training_dataset_size: 50000
+  validation_dataset_size: 1000
+  training_epochs: 2
+
+
+

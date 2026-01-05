@@ -1,0 +1,21 @@
+train:
+  base_path: /scratch/dixiyao
+  model_path: /controlnet/models/control_sd15_canny_ours_changet_epsilon2.pth
+  model_config_path: ./OurSafeControlNet/models/cldm_v15_hide_prompt_safe_changet.yaml
+  log_path: logs/ours_changet_epsilon2
+  condition: canny
+  timestep_start: 226
+
+valid:
+  model_path: /scratch/dixiyao/controlnet/models
+
+utils:
+  batch_size: 4
+  logger_freq: 300
+  seed: 999
+  training_dataset_size: 50000
+  validation_dataset_size: 1000
+  training_epochs: 2
+
+
+
